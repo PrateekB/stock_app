@@ -1,5 +1,5 @@
 class Company < ActiveRecord::Base
-
+    has_many :investments
   validate :symbol_length
 
   def symbol_length

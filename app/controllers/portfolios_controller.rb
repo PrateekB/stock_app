@@ -1,6 +1,11 @@
 class PortfoliosController < ApplicationController
   # GET /portfolios
   # GET /portfolios.json
+
+
+
+
+
   def index
     @portfolios = Portfolio.all
 

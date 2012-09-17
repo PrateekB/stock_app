@@ -1,10 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <p>
   <b>Description:</b>
   <%= @portfolio.description %>
 </p>
 
+<% @portfolio.investments.each do|investment|%>
+    <p>
+    <%=  investment.company.symbol %>
+    <%=  investment.quantity %>
+   </p>
+<%end%>
+
+<p> Worth at cost : <%= @portfolio.worth_at_cost %></p>
+<p>Worth today: <%= @portfolio.worth_today %>
+
+</p>
 
 <%= link_to 'Edit', edit_portfolio_path(@portfolio) %> |
 <%= link_to 'Back', portfolios_path %>
